@@ -1,0 +1,18 @@
+# Copy to private/config.yaml and fill in. private/ is gitignored.
+# Every field is optional; each missing one degrades gracefully rather than
+# failing the run.
+
+api_key:
+  # Free key: https://fredaccount.stlouisfed.org/apikeys
+  # Without it the fetcher falls back to DBnomics (keyless) for mapped series,
+  # then to the local cache in data_cache/. Env var FRED_API_KEY also works
+  # and takes precedence in CI-style setups.
+  FRED: your_32_char_fred_api_key_here
+
+notify:
+  # Google Apps Script web-app /exec URL. Drives the run-history sheet and the
+  # success/failure/stale emails. See SETUP_NOTIFICATIONS.md section A.
+  webapp_url: https://script.google.com/macros/s/XXXXXXXX/exec
+  # Slack incoming webhook. Independent of the above - set either, both, or
+  # neither. See SETUP_NOTIFICATIONS.md section B.
+  slack_webhook: https://hooks.slack.com/services/T000/B000/XXXX

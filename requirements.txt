@@ -1,0 +1,6 @@
+pandas<3  # statsmodels 0.14.x still uses APIs removed in pandas 3
+statsmodels
+matplotlib
+requests
+pyyaml
+pytest

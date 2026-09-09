@@ -1,0 +1,8 @@
+.venv/
+private/
+data_cache/
+output/
+__pycache__/
+*.pyc
+cacert_combined.pem
+.pytest_cache/
